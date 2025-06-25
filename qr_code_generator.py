@@ -1,16 +1,29 @@
 # Import QRCode from pyqrcode
 import pyqrcode
-import png
-from pyqrcode import QRCode
 
-# Declaring The Variable Which Represents To Url, Text Or Phone Number
-text = input("Type In URL or Text: ").strip()
+def main():
+    # Prompt user for input
+    text = input("Type in URL or text to encode: ").strip()
+    if not text:
+        print("Input cannot be empty. Exiting.")
+        return
 
-# Making The Qr Code
-qrcode = pyqrcode.create(text)
+    # Prompt for output filename
+    filename = input("Enter output filename (default: MyQrcode.png): ").strip()
+    if not filename:
+        filename = "MyQrcode.png"
+    if not filename.lower().endswith(".png"):
+        filename += ".png"
 
-# Saving The QrCode In File Named "MyQrcode.png"
-qrcode.png("MyQrcode.png", scale=20)
+    try:
+        # Generate QR code
+        qrcode = pyqrcode.create(text)
+        qrcode.png(filename, scale=8)
+        print(f"QR code saved as '{filename}' successfully.")
+    except Exception as e:
+        print(f"Error generating QR code: {e}")
 
-# Printing Message To The User
-print("Qr Code Made Successfully")
+    input("Press Enter to exit: ")
+
+if __name__ == "__main__":
+    main()
