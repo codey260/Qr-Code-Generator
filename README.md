@@ -41,12 +41,5 @@ Now you're ready to use the script!
 
 ## Author
 
-- **Youcef Shaaban**  
-  [GitHub Profile](https://github.com/youcefshaaban)
-
-## Credits
-
-- Main code: **Youcef Shaaban**
-- Code improvements: **GitHub Copilot**
-
----
+- **CodeY**  
+  [GitHub Profile](https://github.com/codey260)
