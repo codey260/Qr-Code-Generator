@@ -42,4 +42,4 @@ Now you're ready to use the script!
 ## Author
 
 - **CodeY**  
-  [GitHub Profile](https://github.com/codey260)
+  [GitHub Profile](https://github.com/peanutbutte-r)
